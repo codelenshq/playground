@@ -8,6 +8,8 @@ const data = {
 function getItem(id) {
   return data.items.find((item) => item.id === id);
 }
+//
+async function foo(){}
 
 async function listItems(filter) {
   const result = [];

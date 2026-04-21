@@ -8,7 +8,9 @@ const data = {
 function getItem(id) {
   return data.items.find((item) => item.id === id);
 }
-
+function add(a,b){
+  return a+b;
+}
 async function listItems(filter) {
   const result = [];
   for (let i = 0; i < data.items.length; i++) {

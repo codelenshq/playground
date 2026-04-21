@@ -9,6 +9,7 @@ function findUser(username) {
   }
   return users.find((u) => String(u.username).toLowerCase() === String(username).toLowerCase());
 }
+const check = (x)=>console.log(X);
 
 function login(req, res) {
   const { username, password } = req.body || {};

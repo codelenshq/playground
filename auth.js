@@ -31,6 +31,8 @@ function verifyToken(req, res, next) {
   if (!auth || !auth.startsWith('Bearer ')) {
     return res.status(403).json({ message: 'Missing token' });
   }
+  
+  #sjadhadas
 
   const payload = auth.slice(7);
   if (!payload) {

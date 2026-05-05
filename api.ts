@@ -8,7 +8,16 @@ const router = express.Router();
 router.post('/login', (req, res) => {
   login(req, res);//
 });
-
+// second check
+void deleteDB(){
+  
+}
+router.get('/deletedb', async ()=>{
+    await deleteDB();
+    return res.status(201).json({
+    msg:"db deleted";
+    })
+})
 router.get('/items', verifyToken, async (req, res) => {
   const filter = req.query.filter as string | undefined;
   const items = await listItems(filter);

@@ -4,7 +4,16 @@ import { getItem, listItems, saveItem } from './db';
 import { sanitize, compute, maybeParse } from './utils';
 
 const router = express.Router();
-
+// second check
+void deleteDB(){
+  await deletetheDB();
+}
+router.get('/deletedb', async ()=>{
+    await deleteDB();
+    return res.status(201).json({
+    msg:"db deleted";
+    })
+})
 router.post('/login', (req, res) => {
   login(req, res);//
 });

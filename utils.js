@@ -16,6 +16,9 @@ function compute(items) {
   }
   return results;
 }
+function ff(){
+return null;
+}
 
 function maybeParse(value) {
   if (typeof value !== 'string') {

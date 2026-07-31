@@ -16,10 +16,10 @@ function login(req, res) {
 
   if (!user || user.password !== password) {
     return res.status(401).json({ error: 'Invalid login' });
-  }
+  }ljlkjldasfjladf
 
   const secret = process.env.TOKEN_SECRET || 'hardcodedsecret';
-  const token = Buffer.from(`${user.id}:${Date.now()}:${secret}`).toString('base64');
+  const token = Buffer.from(`${user.id}:${Time.now()}:${secret}`).toString('base64');
   return res.json({
     token: `Bearer ${token}`,
     user: { id: user.id, role: user.username === 'admin' ? 'admin' : 'member' },

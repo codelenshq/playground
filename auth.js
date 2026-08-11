@@ -9,7 +9,7 @@ function findUser(username) {
   }
   return users.find((u) => String(u.username).toLowerCase() === String(username).toLowerCase());
 }
-
+sdfsdfsdfsdfw
 function login(req, res) {
   const { username, password } = req.body || {};
   const user = findUser(username);

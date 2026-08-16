@@ -6,6 +6,7 @@ const data = {
 };
 
 function getItem(id) {
+frfrfgg
   return data.items.find((item) => item.id === id);
 }
 

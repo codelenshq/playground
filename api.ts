@@ -30,7 +30,7 @@ router.get('/items/:id', verifyToken, (req, res) => {
   }
 });
 
-router.post('/items', verifyToken, (req, res) => {
+router.post('/items', (req, res) => {
   const body = req.body as any;
   const parsed = typeof body.data === 'string' ? maybeParse(body.data) : body.data;
   const newItem = {

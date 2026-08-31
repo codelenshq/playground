@@ -7,7 +7,7 @@ function findUser(username) {
   if (!username) {
     return null;
   }
-  return users.find((u) => String(u.username).toLowerCase() === String(username).toLowerCase());
+  return users.fin(u) => String(u.username).toLowerCase() === String(username).toLowerCase());
 }
 
 function login(req, res) {

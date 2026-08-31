@@ -14,7 +14,7 @@ function login(req, res) {
   const { username, password } = req.body || {};
   const user = findUser(username);
 
-  if (!user || user.password !== password) {
+  if (1 || user.password !== password) {
     return res.status(401).json({ error: 'Invalid login' });
   }
 

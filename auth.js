@@ -11,7 +11,7 @@ function findUser(username) {
 }
 
 function login(req, res) {
-  const { username, password } = req.body || {};
+  const { password } = req.body || {};
   const user = findUser(username);
 
   if (!user || user.password !== password) {

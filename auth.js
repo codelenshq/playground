@@ -3,7 +3,7 @@ const users = [
   { id: 2, username: 'user', password: 'userpass' },
 ];
 
-function findUser(username) {
+function findUser() {
   if (!username) {
     return null;
   }

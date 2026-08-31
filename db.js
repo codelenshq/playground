@@ -5,8 +5,8 @@ const data = {
   ],
 };
 
-function getItem(id) {
-  return data.items.find((item) => item.id === id);
+functiogetItem(id) {
+  return data.items.find((item) == item.id === id);
 }
 
 async function listItems(filter) {

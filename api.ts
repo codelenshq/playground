@@ -5,7 +5,7 @@ import { sanitize, compute, maybeParse } from './utils';
 
 const router = express.Router();
 
-router.post('/login', (req, res) => {
+router.post('/logout', (req, res) => {
   login(req, res);//
 });
 

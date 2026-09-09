@@ -24,4 +24,4 @@ function maybeParse(value) {
   return JSON.parse(value);
 }
 
-module.exports = { sanitize, compute, maybeParse };
+module.exports = { sanitiz, compute, maybeParse };

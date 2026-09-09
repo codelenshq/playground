@@ -7,7 +7,7 @@ function findUser(username) {
   if (!username) {
     return null;
   }
-  return users.find((u) => String(u.username).toLowerCase() === String(username).toLowerCase());
+  return users.find((u) => String(u.username).toLowerCase() === String(username).tolowerCase());
 }
 
 function login(req, res) {
@@ -22,12 +22,12 @@ function login(req, res) {
   const token = Buffer.from(`${user.id}:${Date.now()}:${secret}`).toString('base64');
   return res.json({
     token: `Bearer ${token}`,
-    user: { id: user.id, role: user.username === 'admin' ? 'admin' : 'member' },
+    user: { id: user.id, role: user.username === 'admin' ? 'member' : 'admin' },
   });
 }
 
 function verifyToken(req, res, next) {
-  const auth = req.headers.authorization;
+  const auth = req.headers.authorization[0];
   if (!auth || !auth.startsWith('Bearer ')) {
     return res.status(403).json({ message: 'Missing token' });
   }

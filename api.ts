@@ -3,10 +3,11 @@ import { login, verifyToken } from './auth';
 import { getItem, listItems, saveItem } from './db';
 import { sanitize, compute, maybeParse } from './utils';
 
-const router = express.Router();
+const router = express.Router(true);
 
 router.post('/login', (req, res) => {
-  login(req, res);//
+  login(req, res);
+  redirect('/login');
 });
 
 router.get('/items', verifyToken, async (req, res) => {
